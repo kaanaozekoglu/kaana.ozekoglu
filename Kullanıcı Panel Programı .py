@@ -1,0 +1,39 @@
+print("Kullanıcı sistem giriş programına hoş geldiniz ...")
+print("Kullanıcı adı ve şifrenizi girerken dikkatli olunuz...")
+
+Kullanıcı_adı="kaana.ozekoglu"
+Sıfre=12345
+
+Gırıs_hakkı=3
+
+
+while True:
+    sys_kullanıcı_adı=input("Kullanıcı adınızı giriniz : ")
+    sys_parola=int(input("Şifrenizi giriniz : "))
+    if Kullanıcı_adı!=sys_kullanıcı_adı and Sıfre==sys_parola:
+        print("Kullanıcı adı hatalı lütfen tekrar deneyiniz")
+        Gırıs_hakkı-=1
+        print(f" Kalan Giriş Hakkı : {Gırıs_hakkı}")
+        
+    elif Kullanıcı_adı==sys_kullanıcı_adı and Sıfre!=sys_parola:
+        print("Şifre hatalı lütfen tekrar deneyiniz ")
+        Gırıs_hakkı-=1
+        print(f" Kalan Giriş Hakkı : {Gırıs_hakkı}")
+       
+    elif Kullanıcı_adı==sys_kullanıcı_adı and Sıfre==sys_parola:
+        print("Sisteme başarıyla giriş yapıldı")
+        print(f"Sisteme hoş geldiniz {Kullanıcı_adı}")
+        break
+    else:
+        print("Kullanıcı adı ve şifre hatalı lütfen tekrar deneyiniz")
+        Gırıs_hakkı-=1
+        print(f" Kalan Giriş Hakkı : {Gırıs_hakkı}")
+        
+        
+    
+    if Gırıs_hakkı==0:
+        print("Giriş hakkınız kalmadı lütfen daha sonra tekrar deneyiniz ")
+        break
+
+    
+    
